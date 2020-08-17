@@ -3,25 +3,24 @@ let inputSong=""
 
 document.getElementById('search-btn').addEventListener('click',()=>{
     inputSong=document.getElementById('input-song').value;
-    if(inputSong.value<1){
-        alert("Please Input Song Name");
+    const inputLength=inputSong.length;
+    console.log(inputLength);
+    if(inputLength>1){
+        searchResult();
     }
     else{
-        searchResult();
+        alert("Please Input Song Name");
     }
     
 });
 
 
-function searchResult() {
-    fetch(`${apiUrl}/suggest/${inputSong}`)
-    .then(res=>res.json())
-    .then(data=>{
-        const allList=data.data;
-        const firstTen=allList.slice(0,10)
-        setInnerText(firstTen);
-    })
-   
+async function searchResult() {
+    const res = await fetch(`${apiUrl}/suggest/${inputSong}`);
+    const data = await res.json();
+    const allList=data.data;
+    const firstTen=allList.slice(0,10)
+    setInnerText(firstTen);
 }
 
 
@@ -44,37 +43,31 @@ document.getElementById('result-wrapper').addEventListener('click',e=>{
     }
 });
 
-function clickedBtn(buttonNumber){
-     fetch(`${apiUrl}/suggest/${inputSong}`)
-     .then(res=>res.json())
-     .then(data=>{
-        const allList=data.data;
-        const firstTen=allList.slice(0,10);
-        const target=firstTen[buttonNumber];
-        const songTitle=target.title;
-        const artist=target.artist.name;
-        getLyrics(artist,songTitle);
-     })
-    
+async function clickedBtn(buttonNumber){
+    const res = await fetch(`${apiUrl}/suggest/${inputSong}`);
+    const data = await res.json();
+    const allList=data.data;
+    const firstTen=allList.slice(0,10);
+    const target=firstTen[buttonNumber];
+    const songTitle=target.title;
+    const artist=target.artist.name;
+    getLyrics(artist,songTitle);
 }
 
-function getLyrics(artist, songTitle) {
-    fetch(`${apiUrl}/v1/${artist}/${songTitle}`)
-    .then(res=>res.json())
-    .then(data=>{
-        document.getElementById('lyrics-title').innerText=songTitle;
-        const lyrics = data.lyrics;
-        if (lyrics==undefined){
-            console.log("Lyrics is not found (Because Api not provided this lyrics) ")
-            const notFoundMessage="Lyrics is not found (Because Api not provided this lyrics, Please try another.) ";
-            document.getElementById('lyrics').innerText=notFoundMessage;
-        }
-        else{
-            console.log(lyrics);
-            document.getElementById('lyrics').innerText=lyrics;
-        }
-    })
 
-   
+async function getLyrics(artist, songTitle) {
+    const res = await fetch(`${apiUrl}/v1/${artist}/${songTitle}`);
+    const data = await res.json();
+    document.getElementById('lyrics-title').innerText=songTitle;
+    const lyrics = data.lyrics;
+    if (lyrics==undefined){
+        console.log("Lyrics is not found (Because Api not provided this lyrics) ")
+        const notFoundMessage="Lyrics is not found (Because Api not provided this lyrics, Please try another.) ";
+        document.getElementById('lyrics').innerText=notFoundMessage;
+    }
+    else{
+        console.log(lyrics);
+        document.getElementById('lyrics').innerText=lyrics;
+    }
 }
 
