@@ -46,169 +46,139 @@
             <div class="search-bar col-md-6 mx-auto">
                 <h1 class="text-center">Lyrics Search</h1>
                 <div class="search-box my-5">
-                    <input type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button class="btn btn-success search-btn">Search</button>
+                    <input id="input-song" value="" type="text" class="form-control" placeholder="Enter your artist song name">
+                    <button id="search-btn" class="btn btn-success search-btn">Search</button>
                 </div>
             </div>
-            <!-- === Simple results === -->
-            <div class="d-flex justify-content-center">
-                <div class="">
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
+
+        <!-- === Fancy results === -->
+        <div id="result-wrapper" class="search-result col-md-8 mx-auto py-4">
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-0" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-0">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-0">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="0">Get Lyrics</button></a>
                 </div>
             </div>
+            <!-- ./ single result -->
+
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-1" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-1">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-1">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="1">Get Lyrics</button></a>
+                </div>
+            </div>
+            <!-- ./ single result -->
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-2" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-2">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-2">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="2">Get Lyrics</button></a>
+                </div>
+            </div>
+            <!-- ./ single result -->
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-3" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-3">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-3">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="3">Get Lyrics</button></a>
+                </div>
+            </div>
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-4" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-4">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-4">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="4">Get Lyrics</button></a>
+                </div>
+            </div>
+            <!-- ./ single result -->
+
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-5" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-5">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-5">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="5">Get Lyrics</button></a>
+                </div>
+            </div>
+            <!-- ./ single result -->
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-6" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-6">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-6">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="6">Get Lyrics</button></a>
+                </div>
+            </div>
+            <!-- ./ single result -->
+            <!-- single result -->
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-7" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-7">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-7">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">  
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="7">Get Lyrics</button></a>
+                </div>
+            </div>
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-8" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-8">Album Name</span></p>
+                    <p class="artist-name author lead">Artist : <span id="name-8">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                    <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="8">Get Lyrics</button></a>
+                </div>
+            </div>
+            <div class="single-result row align-items-center my-3 p-3">
+                <div class="col-md-9">
+                    <h3 id="title-9" class="lyrics-name">Song Title</h3>
+                    <p class="author lead">Album by <span id="album-9">Album Name</span></p>
+                    <p class="artist-name" author lead>Artist : <span id="name-9">Artist Name</span></p>
+                </div>
+                <div class="col-md-3 text-md-right text-center">
+                   <a href="#lyrics-title"> <button  class="btn btn-success" data-buttonNumber="9">Get Lyrics</button></a>
+                </div>
+            </div>
+            <!-- ./ single result -->
+        </div>
+
             <!-- Single Lyrics -->
             <div class="single-lyrics text-center">
                 <button class="btn go-back">&lsaquo;</button>
-                <h2 class="text-success mb-4">Pentatonix - Na Na Na</h2>
-                <pre class="lyric text-white">
-    Wont go whistling like the wind blows,
-    Looking out my window,
-    Just to see the shine
-    Maybe you might call it crazy,
-    How Im acting lately,
-
-    Skipping through the sky
-
-
-
-     I see so clearly,
-
-    Why Im always feeling free.
-
-    So I sleep when my dreams,
-
-    Looking like reality
-
-
-
-    (Gonna feel it! Na na na...) x4
-
-
-
-    Gonna feel it!
-
-
-
-    I know where the greener grass grows
-
-    Youll just have to follow
-
-    To the other side
-
-
-
-     Lets go tiptoe on a tight rope,
-
-    Fallings only natural
-
-    Just spread your wings and fly
-
-
-
-    Youll see so clearly,
-
-    Why Im always feeling free.
-
-    So I sleep when our dreams
-
-    Looking like reality
-
-
-
-    (Gonna feel it! Na na na...) x4
-
-
-
-    Bring it down like
-
-    Ohh way oh
-
-    Yeah yeah yeah yeah yeah yeah
-
-    Break it down like
-
-    Ohh way oh
-
-     Yeah, yeah, yeah...
-
-    All around like
-
-    Ohh way oh
-
-    Yeah, yeah, yeah...
-
-    Sing it loud like!
-
-    Ohh way oh
-
-    Ah oo oo ooo
-
-
-
-     Gonna feel it! (Na na na...)
-
-     Make it sound like! (Na na na...)
-
-    All around like! (Na na na...)
-
-    Sing it loud like! (Na na na...)
-
-    Gonna feel like! (Na na na...)
+                <h2 id="lyrics-title" class="text-success mb-4">Songs Title</h2>
+                <pre id="lyrics" class="lyric text-white">
+    Here will shows lyrics
                 </pre>
-            </div>
-            <!-- === Fancy results === -->
-            <div class="search-result col-md-8 mx-auto py-4">
-                <!-- single result -->
-                <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
-                        <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
-                    </div>
-                    <div class="col-md-3 text-md-right text-center">
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </div>
-                </div>
-                <!-- ./ single result -->
-
-                <!-- single result -->
-                <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
-                        <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
-                    </div>
-                    <div class="col-md-3 text-md-right text-center">
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </div>
-                </div>
-                <!-- ./ single result -->
-                <!-- single result -->
-                <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
-                        <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
-                    </div>
-                    <div class="col-md-3 text-md-right text-center">
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </div>
-                </div>
-                <!-- ./ single result -->
-                <!-- single result -->
-                <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
-                        <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
-                    </div>
-                    <div class="col-md-3 text-md-right text-center">
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </div>
-                </div>
-                <!-- ./ single result -->
-            </div>
-
+            
 
 
         </main>
@@ -218,9 +188,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="index.js"></script>
     <!-- Custom Script Here -->
-
+    
 </body>
 
 </html>
